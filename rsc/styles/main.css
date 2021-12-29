@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --txt-color: black;
+    --bg-color: lightgray;
+    --panel-color: lightgreen;
+}
+
+body{
+    display: block;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Ubuntu, Consolas;
+    font-weight: 400;
+    height: 100vh;
+    width: 100vw;
+    color: var(--txt-color);
+    background: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+header .switch-theme {
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: black;
+}
+
+header b {
+    font-size: larger;
+}
+header span {
+    color: green;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .score-wrapper {
+    font-size: 2rem;
+}
+
+main .config-wrapper {
+    font-size: 2rem;
+    width: 300px;
+    height: 520px;
+}
+
+main canvas {
+    border: 5px solid darkgreen;
+    background: var(--panel-color);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer span {
+    margin: 1rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--txt-color);
+}
