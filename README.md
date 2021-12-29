@@ -1,3 +1,6 @@
+
+![](https://img.shields.io/github/last-commit/tasownzt/the-snake-game-web?style=for-the-badge)
+
 # The Snake Game
 
 The snake game é uma versão web e bem simples do famoso jogo da cobrinha pra quem conhece ou já jogou alguma vez, a medida
@@ -10,4 +13,4 @@ de escolher como a página irá se apresentar durante a jogatina.
 - DIO
 - Instrutora [Gabriela Pinheiro](https://github.com/SpruceGabriela/)
 
-> O [link](https://github.com/SpruceGabriela/snake-the-game) original se encontra no repositório da instrutora Gabriela pra quem deseja consultar a versão original do jogo pra sua proprias modificações.
+> Obs.: O [link](https://github.com/SpruceGabriela/snake-the-game) original se encontra no repositório da instrutora Gabriela pra quem deseja consultar a versão original do jogo para sua própria modificação.
