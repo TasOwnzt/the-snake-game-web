@@ -7,7 +7,9 @@ let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de c
 let speed = 100;
 let counterApple = 0;
 let score = 0;
-let gradeActivated = true;
+let gradeActivated = false;
+let totalSquads = 16;
+let resolution = 0;
 
 
 snake[0] = Points(8 * BOX_SIZE, 8 * BOX_SIZE);
@@ -28,21 +30,21 @@ function update(event){
 	if(event.keyCode == 40 && direction != 'up') direction = 'down';
 }
 
-function iniciarJogo(){    
-
+function iniciarJogo(){
 	if(snake[0].x > 15*BOX_SIZE && direction == "right") snake[0].x = 0;
-	if(snake[0].x < 0 && direction == 'left') snake[0].x = 16 * BOX_SIZE;
+	if(snake[0].x < 0 && direction == 'left') snake[0].x = totalSquads * BOX_SIZE;
 	if(snake[0].y > 15*BOX_SIZE && direction == "down") snake[0].y = 0;
-	if(snake[0].y < 0 && direction == 'up') snake[0].y = 16 * BOX_SIZE;
+	if(snake[0].y < 0 && direction == 'up') snake[0].y = totalSquads * BOX_SIZE;
 	
 	for(i = 1; i < snake.length; i++){
 		if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+			canvas.style.opacity = 0;
 			clearInterval(jogo);
 			alert('Game Over :(');
 		}
 	}
 
-	criarBG(context);
+	criarBG(context, 'gray');
 	// O usuário deverá optar se deseja que seja exibido o jogo com grade ou sem
 	if (gradeActivated)
 		activateGrade(context);
@@ -57,6 +59,7 @@ function iniciarJogo(){
 	if(direction == "left") snakeX -= BOX_SIZE;
 	if (direction == "up") snakeY -= BOX_SIZE;
 	if(direction == "down") snakeY += BOX_SIZE;
+	// changeDirection(direction, snakeX, snakeY);
 
 	if(snakeX != food.x || snakeY != food.y){
 		snake.pop(); //pop tira o último elemento da lista
@@ -69,9 +72,10 @@ function iniciarJogo(){
 
 	snake.unshift(Points(snakeX, snakeY)); //método unshift adiciona como primeiro quadradinho da cobrinha
 
-	// Atualiza dos dados a ser exibidos
+	// Atualiza dos dados a serem exibidos
 	updateScore(score);
 	updadeApples(counterApple);
 }
 iniciarJogo();
+//createModal();
 //let jogo = setInterval(iniciarJogo, speed);

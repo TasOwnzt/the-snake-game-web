@@ -8,6 +8,19 @@ que a cobrinha se alimenta vai se tornando cada vez maior e mais difíl de se mo
 Está versão em relação ao original tem um painel de pontuação e um de configuração, no qual o usuário tem a total liberdade
 de escolher como a página irá se apresentar durante a jogatina.
 
+## Sobre
+
+The snake é um projeto desevolvido de forma didática e para o estudo e aperfeiçoamento fornecido pelo grupo de educação
+Profissional DIO voltado pra desenvolvedores.
+Esta é uma versão do projeto modificada e adicionado novas features ao game pra uma melhor experiência.
+
+## Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- VanillaJS
+- Bootstrap
+
 ### Agradecimentos
 
 - DIO

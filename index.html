@@ -1,34 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="It's a funny game customized by Tas Ownzt base on project received by DIO and ministrared by ">
-    <title>The Snake</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="It's a funny game customized by Tas Ownzt base on project received by DIO and ministrared by ">
+	<title>The Snake</title>
 
-    <link rel="stylesheet" href="/rsc/styles/main.css">
-    <script defer src="/rsc/scripts/utils.js"></script>
-    <script defer src="/rsc/scripts/game.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="/rsc/styles/main.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+	<script defer src="/rsc/scripts/utils.js"></script>
+	<script defer src="/rsc/scripts/game.js"></script>
 </head>
 <body>
-    <header>
-        <h1>The <span><b>S</b>NAKE!</span></h1>
-        <div class="switch-theme"></div>
-    </header>
-    <main>
-        <div class="score-wrapper">
-            <h2>Score</h2>
-            <span id="score"></span>
-            <h3>Maçãs comidas: <span id="countApple"></span></h3>
-        </div>
-        <canvas id="game" width="512" height="512"></canvas>
-        <div class="config-wrapper">
-            <h2>Configurações</h2>
-        </div>
-    </main>
-    <footer>
-        Customized by Tas Ownzt <span></span> 2021
-    </footer>
+	<header class="d-flex align-items-center justify-content-between p-2">
+		<h1 class="p-4">The <span><b>S</b>NAKE!</span></h1>
+		<div id="switch-theme" onclick="toggleDarkLight()" title="Ativar Dark mode">
+			<i class="bi bi-toggle-off fs-2 me-4"></i>
+		</div>
+	</header>
+	<main class="d-md-flex align-items-md-center justify-content-md-evenly container">
+		<div class="flex-md-column flex-xs-row shadow-sm rounded p-3">
+			<div>
+				<h3>Score</h3>
+				<span id="score"></span>
+			</div>
+			<div>
+				<h3>Maçãs: </h3>
+				<span id="countApple"></span>
+			</div>
+		</div>
+		<div class="p-3 shadow-sm rounded panel-game">
+			<canvas id="game" width="512" height="512"></canvas>
+			<div class="modal" tabindex="-1">
+				<div class="modal-dialog">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title">Modal title</h5>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+					  <p>Modal body text goes here.</p>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		</div>
+		<aside class="align-self-start config-wrapper shadow-sm rounded">
+			<div class="p-3">
+				<h2 class="ps-3">Configurações</h2>
+				<div class="p-3">
+					<input class="form-check-input" type="checkbox" id="gradeEnable">
+					<label class="form-check-label ms-2" for="gradeEnable">
+						Mostrar Grade
+					</label>
+				</div>
+				<div class="p-3 form-check changeBg">
+					<label class="form-label" for="toggleBg">Plano de Fundo:</label>
+					<input class="m-1 form-control form-control-color" type="color" name="toggleBg" id="toggleBg">
+					<img class="m-1" src="https://agropos.com.br/wp-content/uploads/2021/01/Florestas-Brasileiras-min.jpg" width="48px" height="26px" alt="Florestas Tropicais">
+					<img class="m-1" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/b0d2018961125cd034171bb7979bc7fa.jpg" width="48px" height="26px" alt="Árvores">
+				</div>
+				<div class="p-3 form-check">
+					<label class="form-label" for="resolutionRange">Resolução:</label>
+					<input class="form-range" type="range" name="resolutionRange" id="resolutionRange" min="4" max="16" step="4">
+				</div>
+				<div class="p-3 form-check">
+					<label class="form-check-label" for="speedGame">Velocidade:</label>
+					<input class="col-sm-6 ms-1 p-2" type="number" id="speedGame" name="speedGame" step="10" min="40" max="100" value="100" onchange="changeSpeed(event)">
+				</div>
+			</div>
+		</aside>
+	</main>
+	<footer class="d-flex align-items-center justify-content-center p-4">
+		Customized by Tas Ownzt <span class="align-items-center justify-content-center m-3"></span> 2021
+	</footer>
 </body>
 </html>
