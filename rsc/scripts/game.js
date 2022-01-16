@@ -11,6 +11,29 @@ let gradeActivated = false;
 let totalSquads = 16;
 let resolution = 0;
 
+// Irá modificar a variável caso haja uma mudança no checkbox
+document.querySelector("#gradeEnable").addEventListener('change', (event) => {
+	gradeActivated = event.target.checked;
+})
+
+const getImageBackground = document.querySelectorAll(".toggleBg");
+getImageBackground.forEach((item) => {
+	item.addEventListener('click', (event) => {
+		const target = event.target;
+		switch(target.name){
+			case 'color':
+				console.log(target.value);
+				break;
+			case 'img1':
+				console.log(target.src);
+				break;
+			case 'img2':
+				console.log(target.src);
+				break;
+		}
+	});
+})
+
 
 snake[0] = Points(8 * BOX_SIZE, 8 * BOX_SIZE);
 let food = Points(Math.floor(Math.random() * 15 + 1) * BOX_SIZE,

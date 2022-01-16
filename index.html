@@ -34,22 +34,6 @@
 		</div>
 		<div class="p-3 shadow-sm rounded panel-game">
 			<canvas id="game" width="512" height="512"></canvas>
-			<div class="modal" tabindex="-1">
-				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title">Modal title</h5>
-					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-					  <p>Modal body text goes here.</p>
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-primary">Save changes</button>
-					</div>
-				  </div>
-				</div>
-			  </div>
 		</div>
 		<aside class="align-self-start config-wrapper shadow-sm rounded">
 			<div class="p-3">
@@ -61,10 +45,10 @@
 					</label>
 				</div>
 				<div class="p-3 form-check changeBg">
-					<label class="form-label" for="toggleBg">Plano de Fundo:</label>
-					<input class="m-1 form-control form-control-color" type="color" name="toggleBg" id="toggleBg">
-					<img class="m-1" src="https://agropos.com.br/wp-content/uploads/2021/01/Florestas-Brasileiras-min.jpg" width="48px" height="26px" alt="Florestas Tropicais">
-					<img class="m-1" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/b0d2018961125cd034171bb7979bc7fa.jpg" width="48px" height="26px" alt="Árvores">
+					<label class="form-label" for="color">Plano de Fundo:</label>
+					<input class="toggleBg m-1 form-control form-control-color" type="color" name="color" id="color" onclick="">
+					<img name="img1" class="toggleBg m-1" src="https://agropos.com.br/wp-content/uploads/2021/01/Florestas-Brasileiras-min.jpg" width="48px" height="26px" alt="Florestas Tropicais">
+					<img name="img2" class="toggleBg m-1" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/b0d2018961125cd034171bb7979bc7fa.jpg" width="48px" height="26px" alt="Árvores">
 				</div>
 				<div class="p-3 form-check">
 					<label class="form-label" for="resolutionRange">Resolução:</label>
