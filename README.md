@@ -25,7 +25,7 @@ Esta é uma versão do projeto modificada e adicionado novas features ao game pr
 
 <div align="center">
 
-![Tela do Jogo](rsc\imgs\game_running.JPG "Jogo em execução")
+![Tela do Jogo]("rsc\imgs\game_running.JPG" "Jogo em execução")
 
 (Desktop)
 
