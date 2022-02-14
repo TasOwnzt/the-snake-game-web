@@ -9,13 +9,17 @@ que a cobrinha se alimenta vai se tornando cada vez maior e mais difíl de se mo
 Está versão em relação ao original tem um painel de pontuação e um de configuração, no qual o usuário tem a total liberdade
 de escolher como a página irá se apresentar durante a jogatina.
 
-![The Snake Game](rsc\imgs\tela_jogo_light.JPG "Tema Light")
+<div align="center">
+
+![The Snake Game](./rsc/imgs/tela_jogo_light.JPG?raw=true "Tema Light")
 
 Modo Light Theme
 
-![The Snake Game](rsc\imgs\tela_jogo_dark.JPG "Tema Dark")
+![The Snake Game](./rsc/imgs/tela_jogo_dark.JPG?raw=true "Tema Dark")
 
 Modo Dark Theme
+
+</div>
 
 ## Sobre
 
@@ -29,7 +33,7 @@ Esta é uma versão do projeto modificada e adicionado novas features ao game pr
 
 (Desktop)
 
-![Tela do Jogo em Dispositivo Móvel](rsc\imgs\tela_movel_ipad_air.JPG "Jogo sendo executado em dispositivo Móvel") <br>
+![Tela do Jogo em Dispositivo Móvel](./rsc/imgs/tela_movel_ipad_air.JPG?raw=true "Jogo sendo executado em dispositivo Móvel") <br>
 
 (iPad Air)
 
