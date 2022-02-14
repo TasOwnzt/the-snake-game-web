@@ -69,13 +69,13 @@ function init() {
 		counterApple++;
 		score += getRandomItem([25, speed]);
 
-		if (counterApple == 5) {
+		if (counterApple == 20) {
 			phase = 2;
 			phaseChanged = true;
-		} else if (counterApple == 10) {
+		} else if (counterApple == 45) {
 			phase = 3;
 			phaseChanged = true;
-		} else if(speed == 20 && counterApple == 15) {
+		} else if(speed == 20 && counterApple == 55) {
 			phase = 1
 			phaseChanged = true;
 		}
